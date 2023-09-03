@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ES6",
+
+        // В какую спецификацию компилируем
+        "target": "ES5",
+        "jsx": "react-jsx",
+
+        // Компилятор будет обрабатывать не только JS, но и TS файлы
+        "allowJs": true,
+        "moduleResolution": "Node",
+
+        // Для абсолютного импорта 
+        "baseUrl": ".",
+        // Позволяет работать с пакетам, которые используют common js как с обычными пакетами с помощью import (require() module.export) = common js
+        "esModuleInterop": true,
+
+        // Если какая-либо библиотека не имеет default import,
+        // лоадеры вроде ts-loader автоматически создают их
+        // вместо такого испорта
+        // import * as React from 'react'
+        // можно писать 
+        // import React from 'react'
+        "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}
